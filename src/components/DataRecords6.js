@@ -57,7 +57,7 @@ const DataRecords6 = () => {
           },
           title: {
             display: true,
-            text: 'Clientes por categorías'
+            text: 'Porcentaje de clientes por categorías'
           }
         },
         scales: {
