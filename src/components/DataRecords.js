@@ -40,7 +40,6 @@ const DataRecords = () => {
         <tbody>
           {dataRecords.map(record => (
             <tr key={record.id}>
-              
               <td>{JSON.stringify(record.json_data)}</td>
             </tr>
           ))}

@@ -1,15 +1,23 @@
 import React from 'react';
-import './App.css';
-import DataRecords from './components/DataRecords.js';
-
+import './css/index.css';
+import Header from './components/Header';
+import Nosotros from './components/Nosotros';
+import Resultados from './components/Resultados';
+import Team from './components/Team';
+import Footer from './components/Footer';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>CSV Data Viewer</h1>
-      </header>
-      <main>
+    <div className="page">
+      
+      {/* <main>
         <DataRecords />
+      </main> */}
+      <Header />
+      <main className="main" id="nosotros">
+        <Nosotros />
+        <Resultados />
+        <Team />
+        <Footer />
       </main>
     </div>
   );
