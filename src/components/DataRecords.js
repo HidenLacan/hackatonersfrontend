@@ -7,7 +7,7 @@ const DataRecords = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/datarecords/')
+    axios.get('https://hackatoners-backend.onrender.com/api/datarecords/')
       .then(response => {
         setDataRecords(response.data);
         setLoading(false);
