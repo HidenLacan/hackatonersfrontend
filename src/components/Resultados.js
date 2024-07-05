@@ -7,8 +7,6 @@ const Resultados = () => {
   return (
     <section className="results" id="results">
       <h2 className="results__title">Resultados</h2>
-      
-      
       <DataRecords1/>
       <DataRecords2/>
       
