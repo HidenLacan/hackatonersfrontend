@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const DataRecords3 = () => {
+const DataRecords5 = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const DataRecords3 = () => {
 
   return (
     <div>
-      <h2>Data Records for File 3</h2>
+      <h2>Data Records for File 5</h2>
       <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   );
