@@ -1,5 +1,8 @@
 import React from 'react';
-import DataRecords1 from './DataRecords1'; // Asegúrate de tener este componente
+import DataRecords from './DataRecords'; // Asegúrate de tener este componente
+import DataRecords2 from './DataRecords2'; // Asegúrate de tener este componente
+import DataRecords3 from './DataRecords3'; // Asegúrate de tener este componente
+
 
 const Resultados = () => {
   return (
@@ -9,7 +12,9 @@ const Resultados = () => {
         <img src="images/your_graphic_image.jpg" alt="Aqui esta el grafico" className="results__graphic-image"/>
       </div>
       <p className="results__subtitle">Descripción de los resultados (aquí va una gráfica)</p>
-      <DataRecords1 />
+      <DataRecords/>
+      
+      
     </section>
   );
 };

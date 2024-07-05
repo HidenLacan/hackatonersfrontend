@@ -7,7 +7,7 @@ const DataRecords = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('https://hackatoners-backend.onrender.com/api/datarecords/')
+    axios.get('https://hackatoners-backend.onrender.com/media/csv_files/clientes_por_categorias/clientes_por_categorias.json')
       .then(response => {
         setDataRecords(response.data);
         setLoading(false);
