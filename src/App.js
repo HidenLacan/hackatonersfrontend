@@ -6,7 +6,7 @@ import Resultados from './components/Resultados';
 import Team from './components/Team';
 import Footer from './components/Footer';
 // import DataRecords from './components/DataRecords';
-import DataRecords1 from './components/DataRecords1';
+// import DataRecords1 from './components/DataRecords1';
 // import DataRecords2 from './components/DataRecords2';
 // import DataRecords3 from './components/DataRecords3';
 
@@ -23,7 +23,7 @@ function App() {
         <Resultados />
         <Team />
         {/* <DataRecords /> */}
-        <DataRecords1 />
+        {/* <DataRecords1 /> */}
         {/* <DataRecords2 />
         <DataRecords3 /> */}
 
