@@ -5,7 +5,7 @@ const Nosotros = () => {
     <section className="nosotros" id="nosotros">
       <h2 className="mision__title">Misión</h2>
       <p className="mision__subtitle">
-        Nuestra misión es aplicar técnicas avanzadas de análisis de datos para predecir tendencias y relacionar información relevante.
+        Aplicar técnicas avanzadas de análisis de datos para predecir tendencias y relacionar información relevante.
         A través de estas acciones, buscamos impulsar el crecimiento y los ingresos de la empresa.
       </p>
 
