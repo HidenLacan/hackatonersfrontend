@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Bar } from 'react-chartjs-2';
 import { Chart, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import '../styles/styles.css';  // Asegúrate de importar el archivo CSS
 
 Chart.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -23,7 +24,7 @@ const DataRecords1 = () => {
   useEffect(() => {
     axios.get('https://hackatoners-backend.onrender.com/media/csv_files/10_articulos_vendidos/10_articulos_vendidos.json')  // URL completa
       .then(response => {
-        console.log(response.data); // Añadir esta línea para verificar los datos recibidos
+        console.log(response.data); // Verificar los datos recibidos
 
         const labels = response.data.map(item => item.DESCRIPTION);
         const values = response.data.map(item => parseInt(item.QUANTITY));
@@ -47,17 +48,17 @@ const DataRecords1 = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Data Records for File 1</h2>
+    <div className="chart-container">
       <Bar data={chartData} options={{
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: {
             position: 'top',
           },
           title: {
             display: true,
-            text: 'Chart.js Bar Chart'
+            text: 'Top 10 artículos más vendidos'
           }
         },
         scales: {
