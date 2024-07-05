@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Bar } from 'react-chartjs-2';
@@ -13,7 +12,7 @@ const DataRecords3 = () => {
     labels: [],
     datasets: [
       {
-        label: 'Count',
+        label: '',
         data: [],
         backgroundColor: 'rgba(75,192,192,0.4)',
         borderColor: 'rgba(75,192,192,1)',
@@ -34,7 +33,7 @@ const DataRecords3 = () => {
           labels: labels,
           datasets: [
             {
-              label: 'Count',
+              label: '',
               data: counts,
               backgroundColor: 'rgba(75,192,192,0.4)',
               borderColor: 'rgba(75,192,192,1)',
@@ -55,11 +54,11 @@ const DataRecords3 = () => {
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            position: 'top',
+            display: false,
           },
           title: {
             display: true,
-            text: 'Top clientes con mayores compras '
+            text: 'Top clientes con mayores compras'
           }
         },
         scales: {
@@ -68,6 +67,9 @@ const DataRecords3 = () => {
             title: {
               display: true,
               text: 'ID Clientes'
+            },
+            grid: {
+              display: false // Elimina el fondo cuadriculado del eje x
             }
           },
           y: {
@@ -75,6 +77,9 @@ const DataRecords3 = () => {
             title: {
               display: true,
               text: 'Conteo'
+            },
+            grid: {
+              display: false // Elimina el fondo cuadriculado del eje y
             }
           }
         }

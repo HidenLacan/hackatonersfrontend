@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Bar } from 'react-chartjs-2';
 import { Chart, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import '../styles/styles.css'; // Asegúrate de importar el archivo CSS
@@ -11,7 +12,7 @@ const DataRecords6 = () => {
     labels: [],
     datasets: [
       {
-        label: 'Count',
+        label: '',
         data: [],
         backgroundColor: 'rgba(75,192,192,0.4)',
         borderColor: 'rgba(75,192,192,1)',
@@ -32,7 +33,7 @@ const DataRecords6 = () => {
           labels: labels,
           datasets: [
             {
-              label: 'Count',
+              label: '',
               data: counts,
               backgroundColor: 'rgba(75,192,192,0.4)',
               borderColor: 'rgba(75,192,192,1)',
@@ -53,7 +54,7 @@ const DataRecords6 = () => {
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            position: 'top',
+            display: false,
           },
           title: {
             display: true,
@@ -66,6 +67,9 @@ const DataRecords6 = () => {
             title: {
               display: true,
               text: 'Cliente'
+            },
+            grid: {
+              display: false // Elimina el fondo cuadriculado del eje x
             }
           },
           y: {
@@ -73,6 +77,9 @@ const DataRecords6 = () => {
             title: {
               display: true,
               text: 'Conteo'
+            },
+            grid: {
+              display: false // Elimina el fondo cuadriculado del eje y
             }
           }
         }

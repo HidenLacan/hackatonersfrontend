@@ -12,7 +12,7 @@ const DataRecords1 = () => {
     labels: [],
     datasets: [
       {
-        label: 'Values',
+        label: '',
         data: [],
         backgroundColor: 'rgba(75,192,192,0.4)',
         borderColor: 'rgba(75,192,192,1)',
@@ -33,7 +33,7 @@ const DataRecords1 = () => {
           labels: labels,
           datasets: [
             {
-              label: 'Values',
+              label: '',
               data: values,
               backgroundColor: 'rgba(75,192,192,0.4)',
               borderColor: 'rgba(75,192,192,1)',
@@ -54,7 +54,7 @@ const DataRecords1 = () => {
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            position: 'top',
+            display: false,
           },
           title: {
             display: true,
@@ -67,6 +67,9 @@ const DataRecords1 = () => {
             title: {
               display: true,
               text: 'Categories'
+            },
+            grid: {
+              display: false // Elimina el fondo cuadriculado del eje x
             }
           },
           y: {
@@ -74,6 +77,9 @@ const DataRecords1 = () => {
             title: {
               display: true,
               text: 'Values'
+            },
+            grid: {
+              display: false // Elimina el fondo cuadriculado del eje y
             }
           }
         }
