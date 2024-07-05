@@ -20,12 +20,13 @@ function App() {
       <Header />
       <main className="main" id="nosotros">
         <Nosotros />
-        <Resultados />
+        
         <Team />
         {/* <DataRecords /> */}
         {/* <DataRecords1 /> */}
         {/* <DataRecords2 />
         <DataRecords3 /> */}
+        <Resultados />
 
         <Footer />
       </main>
