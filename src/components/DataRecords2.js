@@ -5,7 +5,7 @@ const DataRecords2 = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('/media/csv_files/file2.json')
+    axios.get('https://hackatoners-backend.onrender.com/media/csv_files/clientes_por_categorias/clientes_por_categorias.json')
       .then(response => {
         setData(response.data);
       })

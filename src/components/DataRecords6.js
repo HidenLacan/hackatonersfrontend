@@ -5,7 +5,7 @@ const DataRecords3 = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('https://hackatoners-backend.onrender.com/media/csv_files/top_10_clientes_con_mayor_compra/top_10_clientes_con_mayor_compra.json')
+    axios.get('https://hackatoners-backend.onrender.com/media/csv_files/clientes_por_categorias/clientes_por_categorias.json')
       .then(response => {
         setData(response.data);
       })
@@ -22,4 +22,4 @@ const DataRecords3 = () => {
   );
 };
 
-export default DataRecords3;
+export default DataRecords6;
