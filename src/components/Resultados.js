@@ -1,7 +1,6 @@
 import React from 'react';
 import DataRecords from './DataRecords'; // Asegúrate de tener este componente
-import DataRecords2 from './DataRecords2'; // Asegúrate de tener este componente
-import DataRecords3 from './DataRecords3'; // Asegúrate de tener este componente
+import DataRecords1 from './DataRecords1'; // Asegúrate de tener este componente
 
 
 const Resultados = () => {
