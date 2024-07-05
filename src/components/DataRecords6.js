@@ -26,7 +26,7 @@ const DataRecords6 = () => {
         console.log(response.data); // Añadir esta línea para verificar los datos recibidos
 
         const labels = response.data.map(item => item.CATEGORY);
-        const counts = response.data.map(item => parseInt(item.COUNT));
+        const counts = response.data.map(item => parseInt(item.PERCENTAGE));
 
         setChartData({
           labels: labels,
