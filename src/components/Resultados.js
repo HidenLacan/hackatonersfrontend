@@ -14,7 +14,6 @@ const Resultados = () => {
     <section className="results" id="results">
       <h2 className="mision__title">Contexto del problema</h2>
       <p className="mision__subtitle">
-        Contexto del problema.
         Es fundamental identificar los distintos grupos de clientes para que la empresa pueda optimizar la experiencia y el servicio ofrecido. Esto permitirá mejorar la retención de clientes y maximizar su valor a lo largo del tiempo, además de personalizar las estrategias de marketing.
       </p>
       

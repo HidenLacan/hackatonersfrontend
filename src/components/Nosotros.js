@@ -15,8 +15,8 @@ const Nosotros = () => {
         Visualizamos un futuro donde nuestras soluciones sean fundamentales para el éxito empresarial.
       </p>
 
-      <h2 className="valores__title">Valores</h2>
-      <p className="valores__subtitle"> Innovación, Colaboración, Ética y Compromiso </p>
+      <h2 className="vision__title">Valores</h2>
+      <p className="vision__subtitle"> Innovación, Colaboración, Ética y Compromiso </p>
       
       <div className="content__video-item">
         <iframe
