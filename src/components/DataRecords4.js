@@ -66,7 +66,7 @@ const DataRecords4 = () => {
             type: 'category',
             title: {
               display: true,
-              text: 'ID Clientes'
+              text: 'Artículos'
             }
           },
           y: {
