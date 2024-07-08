@@ -9,13 +9,18 @@ import DataRecords5 from './DataRecords5';
 import DataRecords7 from './DataRecords7';
 import MapComponent from './MapComponent'; 
 
+
 const Resultados = () => {
   return (
     <section className="results" id="results">
       <h2 data-aos="fade-up" data-aos-duration="2000" className="mision__title">Contexto del problema</h2>
-      <p  data-aos="fade-up" data-aos-duration="2000"className="mision__subtitle">
+      <p  data-aos="fade-up" data-aos-duration="2000" >
         Es fundamental identificar los distintos grupos de clientes para que la empresa pueda optimizar la experiencia y el servicio ofrecido. Esto permitirá mejorar la retención de clientes y maximizar su valor a lo largo del tiempo, además de personalizar las estrategias de marketing.
       </p>
+
+      <MapComponent/> 
+
+
 
       <h2 data-aos="fade-up" data-aos-duration="2000" className="results__title">Resultados</h2>
       <DataRecords1/>
