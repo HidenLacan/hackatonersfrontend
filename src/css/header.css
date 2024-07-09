@@ -29,7 +29,7 @@
     max-width: 70%;
     margin-left: 0;
     font-size: 110px;
-    line-height: 110px;
+    line-height: 130px;
     font-weight: 500;
     margin-bottom: 40px;;
   }
@@ -40,8 +40,8 @@
   }
   
   .nav__logo {
-    width: 58px;
-    height: 80px;
+    width: 68px;
+    height: 90px;
   }
   
   .nav__links {

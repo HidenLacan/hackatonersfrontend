@@ -1,7 +1,8 @@
 .page {
-    font-family:  "trebuchet ms", sans-serif;
+    
     margin: 0 auto;
-    font-size: 36px;
-    line-height: 20px;
     }
     
+    body {
+        margin: 0;
+      }

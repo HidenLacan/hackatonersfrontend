@@ -9,10 +9,12 @@
     "axios": "^1.7.2",
     "chart.js": "^4.4.3",
     "chartjs-chart-geo": "^4.3.1",
+    "framer-motion": "^11.2.13",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
     "react-google-charts": "^4.0.1",
+    "react-intersection-observer": "^9.10.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "world-atlas": "^2.0.2"

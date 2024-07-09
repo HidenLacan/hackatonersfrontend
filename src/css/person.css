@@ -4,7 +4,7 @@
   line-height: 16px;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  margin-top: 200px;
+  
 }
 
 .person__title {
@@ -15,7 +15,7 @@
 .person__social{
     list-style: none;
     font-size: 20px;
-    max-width: 300px;
+    max-width: 100px;
     margin: auto;
     font-family: 'Trebuchet MS', sans-serif;
     padding-top: 30px;
