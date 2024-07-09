@@ -19,15 +19,16 @@ const MapComponent = () => {
   const options = {
     title: 'Total Revenue by Region in Europe',
     region: "150", // Europe
-    colorAxis: { colors: ["#00853f", "black", "#e31b23"] },
-    backgroundColor: "#81d4fa",
-    datalessRegionColor: "#f8bbd0",
+    colorAxis: { colors: ["#d0b4e1", "#a0d8ef"] }, // Light Purple to Light Blue
+    backgroundColor: "#f1f7f9",
+    datalessRegionColor: "#f1f7f9", // Fixed typo: changed "##f1f7f9" to "#f1f7f9"
     defaultColor: "#f5f5f5",
   };
+  
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <div style={{ width: '60%', height: '60%' }}>
+    <div   style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <div className="shadow-lg" style={{ width: '60%', height: '60%' }}>
         <Chart
           chartType="GeoChart"
           width="100%"

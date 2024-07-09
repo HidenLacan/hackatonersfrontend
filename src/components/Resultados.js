@@ -11,15 +11,47 @@ import MapComponent from './MapComponent';
 
 
 const Resultados = () => {
+
+  const text = "Conócenos";
+  const letters = text.split("");
+
+  const container = {
+    hidden: { opacity: 0 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.44 * i },
+    }),
+  };
+
+  const child = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+  };
   return (
     <section className="results py-8" id="results">
     <div className="container align-center mx-auto px-4">
-      <h2 data-aos="fade-up" data-aos-duration="2000" className="text-6xl center font-bold mb-6 text-center">Contexto del problema</h2>
+      <h2 data-aos="fade-up" data-aos-duration="2000" className="text-6xl center font-bold mb-6 text-center">Contexto</h2>
       <p data-aos="fade-up" data-aos-duration="2000" className="text-2xl p-6 mb-8 text-center">
         Es fundamental identificar los distintos grupos de clientes para que la empresa pueda optimizar la experiencia y el servicio ofrecido. Esto permitirá mejorar la retención de clientes y maximizar su valor a lo largo del tiempo, además de personalizar las estrategias de marketing.
       </p>
 
-      <div className="grid grid-cols-1">
+      <div className=" ">
       <h2 data-aos="fade-up" data-aos-duration="2000" className="text-6xl center font-bold  text-center">Contexto del problema</h2>
         <MapComponent />
       

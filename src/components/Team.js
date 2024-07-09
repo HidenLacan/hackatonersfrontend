@@ -1,14 +1,80 @@
 import React from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Team = () => {
+
+
+  const text = "Equipo";
+  const letters = text.split("");
+
+  const container = {
+    hidden: { opacity: 0 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.44 * i },
+    }),
+  };
+
+  const child = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+  };
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+
+
+
   return (
     <section className="person " id="team">
-
-      <div data-aos="fade-up" data-aos-duration="2000" class="text-7xl font-bold text-center  p-2">
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500">
-           Equipo
-        </span>
-      </div>
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={container}
+      >
+        <motion.div className=" mb-10 text-7xl font-bold text-center">
+          {letters.map((letter, index) => (
+            <motion.span
+              key={index}
+              className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500"
+              variants={child}
+              style={{ letterSpacing: "-0.05em" }}
+            >
+              {letter}
+            </motion.span>
+          ))}
+        </motion.div>
+      </motion.div>
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <li className="person__social">
           <span className="block text-lg font-semibold">Denise</span>
