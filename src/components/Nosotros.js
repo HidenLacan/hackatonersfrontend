@@ -59,14 +59,14 @@ const Nosotros = () => {
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.6 }}>
             <div className="relative bg-white text-white border shadow-sm rounded-xl">
               <img className="w-full h-auto rounded-xl" src="https://images.unsplash.com/photo-1677586895666-fd27db4205da?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image Description" />
-              <div className="absolute top-0 start-0 end-0">
-                <div className="p-4 md:p-5" data-aos="fade-up" data-aos-duration="2000">
-                  <h3 className="text-4xl font-bold mb-4 ">
+              <div className=" left-0 right-0 absolute top-0 start-0 end-0 ">
+                <div className="p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10" data-aos="fade-up" data-aos-duration="2000">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-3 md:mb-4 lg:mb-5 xl:mb-6">
                     Misión
                   </h3>
-                  <p className="mt-1  text-xl">
+                  <p className="mt-1 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                     Aplicar técnicas avanzadas de análisis de datos para predecir tendencias y relacionar información relevante.
-                    A través de estas acciones, buscamos impulsar el crecimiento y los ingresos de la empresa.
+                    
                   </p>
                 </div>
               </div>
@@ -79,10 +79,10 @@ const Nosotros = () => {
               <img className="w-full h-auto rounded-xl" src="https://images.unsplash.com/photo-1676430535219-32115efb1e3c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image Description" />
               <div className="absolute top-0 start-0 end-0">
                 <div className="p-4 md:p-5" data-aos="fade-up" data-aos-duration="2000">
-                  <h3 className="text-4xl font-bold mb-4 ">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-3 md:mb-4 lg:mb-5 xl:mb-6">
                     Visión
                   </h3>
-                  <p className="mt-1  text-xl">
+                  <p className="mt-1 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                     Queremos ser líderes en la aplicación de tecnologías de datos para tomar decisiones estratégicas.
                     Visualizamos un futuro donde nuestras soluciones sean fundamentales para el éxito empresarial.
                   </p>
@@ -97,10 +97,10 @@ const Nosotros = () => {
               <img className="w-full h-auto rounded-xl" src="https://images.unsplash.com/photo-1677586883848-695b3ad692b4?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image Description" />
               <div className="absolute top-0 start-0 end-0">
                 <div className="p-4 md:p-5" data-aos="fade-up" data-aos-duration="2000">
-                  <h3 className="text-4xl font-bold mb-4 ">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-3 md:mb-4 lg:mb-5 xl:mb-6">
                     Valores
                   </h3>
-                  <p className="mt-1  text-xl">
+                  <p className="mt-1 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                     Innovación, Colaboración, Ética y Compromiso
                   </p>
                 </div>
