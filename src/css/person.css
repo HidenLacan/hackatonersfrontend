@@ -8,23 +8,24 @@
 }
 
 .person__title {
-  font-size: 4em;
+  font-size: 2em;
   line-height: 2em;
 }
 
-.person__social{
-    list-style: none;
-    font-size: 20px;
-    max-width: 100px;
-    margin: auto;
-    font-family: 'Trebuchet MS', sans-serif;
-    padding-top: 30px;
-    text-align: center;
-  }
+.person__social {
+  list-style: none;
+  /* Adjusted width for better appearance */
+  margin: auto;
+  font-family: 'Trebuchet MS', sans-serif;
+  padding-top: 20px; /* Adjusted padding for better spacing */
+  text-align: center;
+}
+
 
 /* Denise */
 
 .person__denise{
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 

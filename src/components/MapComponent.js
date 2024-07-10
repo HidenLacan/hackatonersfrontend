@@ -19,7 +19,7 @@ const MapComponent = () => {
   const options = {
     title: 'Total Revenue by Region in Europe',
     region: "150", // Europe
-    colorAxis: { colors: ["#d0b4e1", "#a0d8ef"] }, // Light Purple to Light Blue
+    colorAxis: { colors: ["#1e88e5", "#0d47a1"] }, // Light Purple to Light Blue
     backgroundColor: "#f1f7f9",
     datalessRegionColor: "#f1f7f9", // Fixed typo: changed "##f1f7f9" to "#f1f7f9"
     defaultColor: "#f5f5f5",
@@ -27,8 +27,8 @@ const MapComponent = () => {
   
 
   return (
-    <div   style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <div className="shadow-lg" style={{ width: '60%', height: '60%' }}>
+    <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-8 p-4 lg:p-8">
+      <div className="shadow-lg w-full lg:w-2/3 h-64 lg:h-auto mb-6 lg:mb-0">
         <Chart
           chartType="GeoChart"
           width="100%"
@@ -37,6 +37,12 @@ const MapComponent = () => {
           options={options}
           loader={<div>Loading Chart...</div>}
         />
+      </div>
+      <div className="w-full lg:w-1/3 text-center lg:text-left">
+        <h3 className="text-2xl font-bold mb-4">Ingresos totales por país</h3>
+        <p className="text-lg">
+          Este mapa muestra los ingresos totales generados por diferentes regiones de Europa. El degradado de color del violeta al azul indica los niveles de ingresos, donde el azul representa los ingresos más altos y el violeta los más bajos. Esta visualización ayuda a identificar las regiones clave que contribuyen a los ingresos generales.
+        </p>
       </div>
     </div>
   );
