@@ -46,7 +46,7 @@ const Resultados = () => {
   return (
     <section className="results py-8" id="results">
       <div className="container mx-auto px-4  ">
-        <h2 data-aos="fade-up" data-aos-duration="2000" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold  mb-20 text-center  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500">Reto</h2>
+      <h2 data-aos="fade-up" data-aos-duration="2000" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold  mb-20 text-center  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500">Reto</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-8">
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.6 }}>
           <div className="relative bg-white border shadow-sm rounded-xl ">
