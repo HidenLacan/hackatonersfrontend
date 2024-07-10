@@ -73,7 +73,7 @@ const Resultados = () => {
 
         </div>
         <div data-aos="fade-up" data-aos-duration="2000" className=" ">
-          <h2 data-aos="fade-up" data-aos-duration="2000" className="text-6xl center font-bold mt-10 mb-10 text-center  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500">Resultados</h2>
+          <h2 data-aos="fade-up" data-aos-duration="2000" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold  mb-20 text-center  bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500">Resultados</h2>
           <MapComponent data-aos="fade-up" data-aos-duration="2000" />
           
         </div>
