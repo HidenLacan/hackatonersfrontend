@@ -24,7 +24,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className="footer__copyright"> Copyright &#169; 2024 Hackathoners: Denise, Cecilia, Luis, Emanuel, José, Santiago.</p>
+      <p className="footer__copyright"> Copyright &#169; 2024 Hackathoners</p>
     </footer>
   );
 };

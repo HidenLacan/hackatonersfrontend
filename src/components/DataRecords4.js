@@ -1,89 +1,54 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Bar } from 'react-chartjs-2';
-import { Chart, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
-import '../styles/styles.css'; // Asegúrate de importar el archivo CSS
-
-Chart.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+import { Chart } from 'react-google-charts';
+import '../styles/styles.css';  // Ensure you import the CSS file
 
 const DataRecords4 = () => {
-  const [data, setData] = useState([]);
-  const [chartData, setChartData] = useState({
-    labels: [],
-    datasets: [
-      {
-        label: '',
-        data: [],
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
-        borderWidth: 1
-      }
-    ]
-  });
+  const [chartData, setChartData] = useState([
+    ['Description', 'Total Revenue']
+  ]);
 
   useEffect(() => {
     axios.get('https://hackatoners-backend.onrender.com/media/csv_files/top_10_articulos_por_ganancia/top_10_articulos_por_ganancia.json')
       .then(response => {
-        console.log(response.data); // Añadir esta línea para verificar los datos recibidos
+        console.log(response.data); // Verify received data
 
-        const labels = response.data.map(item => item.DESCRIPTION);
-        const counts = response.data.map(item => parseInt(item.TOTAL_REVENUE));
-
-        setChartData({
-          labels: labels,
-          datasets: [
-            {
-              label: '',
-              data: counts,
-              backgroundColor: 'rgba(75,192,192,0.4)',
-              borderColor: 'rgba(75,192,192,1)',
-              borderWidth: 1
-            }
-          ]
-        });
+        const data = response.data.map(item => [item.DESCRIPTION, parseInt(item.TOTAL_REVENUE)]);
+        setChartData(prevData => [['Description', 'Total Revenue'], ...data]);
       })
       .catch(error => {
         console.error("There was an error fetching the JSON data!", error);
       });
   }, []);
 
+  const options = {
+    title: 'Top 10 Artículos por Ganancia',
+    pieHole: 0.4, // This makes the pie chart a donut chart
+    backgroundColor: '#ffffff', // White background
+    colors: [ '#42a5f5', // Light Blue
+      '#1e88e5', // Blue
+      '#1565c0', // Darker Blue
+      '#0d47a1', // Even Darker Blue
+      '#2196f3', // Standard Blue
+      '#64b5f6', // Medium Light Blue
+      '#1976d2', // Dark Blue
+      '#90caf9', // Very Light Blue
+      '#1565c0', // Medium Dark Blue
+      '#0d47a1'  // Very Dark Blue
+      ], 
+    chartArea: { width: '80%', height: '80%' },
+  };
+
   return (
-    <div className="chart-container">
-      <Bar data={chartData} options={{
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false,
-          },
-          title: {
-            display: true,
-            text: 'Top 10 artículos por ganancia'
-          }
-        },
-        scales: {
-          x: {
-            type: 'category',
-            title: {
-              display: true,
-              text: 'Artículos'
-            },
-            grid: {
-              display: false // Elimina el fondo cuadriculado del eje x
-            }
-          },
-          y: {
-            type: 'linear',
-            title: {
-              display: true,
-              text: 'Conteo'
-            },
-            grid: {
-              display: false // Elimina el fondo cuadriculado del eje y
-            }
-          }
-        }
-      }} />
+    <div className="chart-container" style={{ width: '100%', height: '500px' }}>
+      <Chart
+        chartType="PieChart"
+        width="100%"
+        height="100%"
+        data={chartData}
+        options={options}
+        loader={<div>Loading Chart...</div>}
+      />
     </div>
   );
 };

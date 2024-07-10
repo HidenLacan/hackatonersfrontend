@@ -1,89 +1,52 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Bar } from 'react-chartjs-2';
-import { Chart, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
-import '../styles/styles.css'; // Asegúrate de importar el archivo CSS
-
-Chart.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+import { Chart } from 'react-google-charts';
+import '../styles/styles.css';  // Ensure you import the CSS file
 
 const DataRecords2 = () => {
-  const [data, setData] = useState([]);
-  const [chartData, setChartData] = useState({
-    labels: [],
-    datasets: [
-      {
-        label: '',
-        data: [],
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
-        borderWidth: 1
-      }
-    ]
-  });
+  const [chartData, setChartData] = useState([
+    ['Category', 'Count']
+  ]);
 
   useEffect(() => {
     axios.get('https://hackatoners-backend.onrender.com/media/csv_files/clientes_por_categorias/clientes_por_categorias.json')
       .then(response => {
-        console.log(response.data); // Añadir esta línea para verificar los datos recibidos
+        console.log(response.data); // Verify received data
 
-        const labels = response.data.map(item => item.CATEGORY);
-        const counts = response.data.map(item => parseInt(item.COUNT));
-
-        setChartData({
-          labels: labels,
-          datasets: [
-            {
-              label: '',
-              data: counts,
-              backgroundColor: 'rgba(75,192,192,0.4)',
-              borderColor: 'rgba(75,192,192,1)',
-              borderWidth: 1
-            }
-          ]
-        });
+        const data = response.data.map(item => [item.CATEGORY, parseInt(item.COUNT)]);
+        setChartData(prevData => [['Category', 'Count'], ...data]);
       })
       .catch(error => {
         console.error("There was an error fetching the JSON data!", error);
       });
   }, []);
 
+  const options = {
+    title: 'Distribución de Clientes por Categorías',
+    chartArea: { width: '60%' },
+    hAxis: {
+      title: '',
+      minValue: 0,
+    },
+    vAxis: {
+      title: '',
+    },
+    legend: { position: 'none' },
+    backgroundColor: '#ffffff', // White background
+    colors: ['#1565c0'], // Blue color
+    bar: { groupWidth: '75%' }, // Bar width
+  };
+
   return (
-    <div className="chart-container">
-      <Bar data={chartData} options={{
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false,
-          },
-          title: {
-            display: true,
-            text: 'Distribución de Clientes por Categorías'
-          }
-        },
-        scales: {
-          x: {
-            type: 'category',
-            title: {
-              display: true,
-              text: 'Categorías'
-            },
-            grid: {
-              display: false // Elimina el fondo cuadriculado del eje x
-            }
-          },
-          y: {
-            type: 'linear',
-            title: {
-              display: true,
-              text: 'Conteo'
-            },
-            grid: {
-              display: false // Elimina el fondo cuadriculado del eje y
-            }
-          }
-        }
-      }} />
+    <div className="chart-container" style={{ width: '100%', height: '500px' }}>
+      <Chart
+        chartType="BarChart"
+        width="100%"
+        height="100%"
+        data={chartData}
+        options={options}
+        loader={<div>Loading Chart...</div>}
+      />
     </div>
   );
 };

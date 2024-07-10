@@ -34,8 +34,8 @@
   }
   
   .footer__logo {
-  width: 250px;
-  height: 200px;
+width: 50px;
+  height: 50px;
   }
   
   .footer__social {
@@ -104,8 +104,8 @@
   @media screen and (max-width: 768px){
   
   .footer__logo {
-  width: 150px;
-  height: 100px;
+  width: 10px;
+  height: 10px;
   }
   
   .footer__list-item {
@@ -138,8 +138,8 @@
   @media screen and (max-width: 320px){
   
     .footer__logo {
-      width: 100px;
-      height: 80px;
+      width: 10px;
+      height: 10px;
      }
     
      .footer__social-heading {
