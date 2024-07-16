@@ -57,9 +57,9 @@ const Resultados = () => {
               />
               <div className="absolute inset-0  flex items-center justify-center">
                 <div className="p-4 md:p-5" data-aos="fade-up" data-aos-duration="2000">
-                  <h3 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-4 text-white">Context</h3>
+                  <h3 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-4 text-white">Contexto</h3>
                   <p className="mt-1 text-sm sm:text-base md:text-lg lg:text-2xl text-white">
-                  El Triple Ten Retail Challenge propone un desafío para identificar las tendencias de los compradores en Europa, con el objetivo de determinar posibles oportunidades de venta. Esto te permitirá generar diversas estrategias de ventas que traduzcan los datos en acciones comerciales concretas.
+                  El Triple Ten Retail Challenge propone un desafío para identificar las tendencias de los compradores en Europa, con el objetivo de determinar posibles oportunidades de venta. 
                   </p>
                 </div>
               </div>
@@ -74,9 +74,9 @@ const Resultados = () => {
               />
               <div className="absolute inset-0  flex items-center justify-center">
                 <div className="p-4 md:p-5" data-aos="fade-up" data-aos-duration="2000">
-                  <h3 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-4 text-white">Objective</h3>
+                  <h3 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-4 text-white">Objectivo</h3>
                   <p className="mt-1 text-sm sm:text-base md:text-lg lg:text-2xl text-white">
-                  Realizar un análisis estadístico utilizando procedimientos como análisis de conjuntos de datos, estadísticas descriptivas, segmentación, predicción, agrupamiento y visualización de datos para llevar a cabo la segmentación de clientes con el fin de generar oportunidades de ventas.
+                  Realizar un análisis estadístico utilizando procedimientos como estadísticas descriptivas, segmentación, predicción, agrupamiento y visualización de datos para llevar a cabo la segmentación de clientes con el fin de generar oportunidades de ventas.
                   </p>
                 </div>
               </div>
