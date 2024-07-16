@@ -8,7 +8,7 @@ const Header = () => {
       <nav className="nav">
         <ul data-aos="fade-up" data-aos-duration="2000" className="nav__links">
           <li><a href="#nosotros" className="nav__link">Nuestra misión</a></li>
-          <li><a href="#results" className="nav__link">Resultados</a></li>
+          <li><a href="#results" className="nav__link">Reto</a></li>
           <li><a href="#team" className="nav__link">¿Quiénes somos?</a></li>
           <li><a href="#social" className="nav__link">Redes Sociales</a></li>
         </ul>
