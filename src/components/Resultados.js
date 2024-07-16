@@ -76,7 +76,7 @@ const Resultados = () => {
                 <div className="p-4 md:p-5" data-aos="fade-up" data-aos-duration="2000">
                   <h3 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-4 text-white">Objectivo</h3>
                   <p className="mt-1 text-sm sm:text-base md:text-lg lg:text-2xl text-white">
-                  Realizar un análisis estadístico utilizando procedimientos como estadísticas descriptivas, segmentación, predicción, agrupamiento y visualización de datos para llevar a cabo la segmentación de clientes con el fin de generar oportunidades de ventas.
+                  Realizar un análisis estadístico utilizando procedimientos de ciencia de datos para generar oportunidades de ventas.
                   </p>
                 </div>
               </div>
